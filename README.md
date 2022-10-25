@@ -12,6 +12,7 @@
 +----------+--------------+------+-----+---------+----------------+
 
 //adding data into the table
+
 mysql> insert into movies(id, title, genre, duration)
     -> VALUES (1, 'Metropolis', 'Sci-Fi', 153);
 Query OK, 1 row affected (0.03 sec)
@@ -29,6 +30,7 @@ mysql> insert into movies(id, title, genre, duration)
 Query OK, 1 row affected (0.01 sec)
 
 //after adding data
+
 mysql> select * from movies
 
 +----+---------------+-----------+----------+
@@ -41,6 +43,8 @@ mysql> select * from movies
 +----+---------------+-----------+----------+
 
 //Updating data
+
+
 mysql> update movies
     -> SET genre = 'Romance'
     -> WHERE id = 4;
@@ -54,7 +58,12 @@ Rows matched: 1  Changed: 1  Warnings: 0
 |  3 | The kid       | Comedy  |       68 |
 |  4 | The Gold Rush | Romance |       95 |
 +----+---------------+---------+----------+
+
+
+
 // add a column and adding data inside
+
+
 mysql> ALTER TABLE movies
     -> ADD COLUMN ratings int;
 Query OK, 0 rows affected (0.13 sec)
