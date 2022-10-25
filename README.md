@@ -93,3 +93,31 @@ mysql> UPDATE movies
 Query OK, 1 row affected (0.01 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
 
+
+// selecting certain columns from the table
+mysql> SELECT title, genre
+    -> FROM movies;
++---------------+---------+
+| title         | genre   |
++---------------+---------+
+| Metropolis    | Sci-Fi  |
+| Nosferatu     | Horror  |
+| The kid       | Comedy  |
+| The Gold Rush | Romance |
++---------------+---------+
+
+
+//Comparsion operator
+
+
+mysql> SELECT *
+    -> FROM movies
+    -> WHERE duration > 100;
+    
+    
++----+------------+--------+----------+---------+
+| id | title      | genre  | duration | ratings |
++----+------------+--------+----------+---------+
+|  1 | Metropolis | Sci-Fi |      153 |       9 |
++----+------------+--------+----------+---------+
+
